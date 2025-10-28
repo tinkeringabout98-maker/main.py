@@ -3,7 +3,7 @@ import requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-TOKEN = "8469043377:AAF7JHvEVGkpTVn2G2vpKXi4BlCK6PSzOH4"
+TOKEN = '8469043377:AAF7JHvEVGkpTVn2G2vpKXi4BlCK6PSzOH4'
 
 async def price(update: Update, context: ContextTypes.DEFAULT_TYPE):
     coin = context.args[0] if context.args else 'bitcoin'
