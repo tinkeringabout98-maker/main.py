@@ -21,3 +21,8 @@ async def price(update: Update, context: ContextTypes.DEFAULT_TYPE):
 app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("price", price))
 app.run_polling()
+
+🔹 requirements.txt
+
+python-telegram-bot==20.3
+requests
