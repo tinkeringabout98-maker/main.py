@@ -12,9 +12,9 @@ async def price(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if coin in response:
         rate = response[coin]['usd']
-        await update.message.reply_text(f'💰 Курс {coin.capitalize()} сейчас: ${rate}')
+        await update.message.reply_text(f'Курс {coin.capitalize()} сейчас: ${rate}')
     else:
-        await update.message.reply_text('❌ Монета не найдена. Попробуй /price bitcoin')
+        await update.message.reply_text('Монета не найдена. Попробуй /price bitcoin')
 
 app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler('price', price))
